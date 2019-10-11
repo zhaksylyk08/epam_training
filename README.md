@@ -1,1 +1,1 @@
-# epam_training
+EPAM training: .NET Development (C#) Basics
