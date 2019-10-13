@@ -1,0 +1,10 @@
+C:\Users\Yadro\source\repos\methods_in_details_problem2\methods_in_details_problem2\bin\Debug\netcoreapp3.0\methods_in_details_problem2.exe
+C:\Users\Yadro\source\repos\methods_in_details_problem2\methods_in_details_problem2\bin\Debug\netcoreapp3.0\methods_in_details_problem2.deps.json
+C:\Users\Yadro\source\repos\methods_in_details_problem2\methods_in_details_problem2\bin\Debug\netcoreapp3.0\methods_in_details_problem2.runtimeconfig.json
+C:\Users\Yadro\source\repos\methods_in_details_problem2\methods_in_details_problem2\bin\Debug\netcoreapp3.0\methods_in_details_problem2.runtimeconfig.dev.json
+C:\Users\Yadro\source\repos\methods_in_details_problem2\methods_in_details_problem2\bin\Debug\netcoreapp3.0\methods_in_details_problem2.dll
+C:\Users\Yadro\source\repos\methods_in_details_problem2\methods_in_details_problem2\bin\Debug\netcoreapp3.0\methods_in_details_problem2.pdb
+C:\Users\Yadro\source\repos\methods_in_details_problem2\methods_in_details_problem2\obj\Debug\netcoreapp3.0\methods_in_details_problem2.AssemblyInfoInputs.cache
+C:\Users\Yadro\source\repos\methods_in_details_problem2\methods_in_details_problem2\obj\Debug\netcoreapp3.0\methods_in_details_problem2.AssemblyInfo.cs
+C:\Users\Yadro\source\repos\methods_in_details_problem2\methods_in_details_problem2\obj\Debug\netcoreapp3.0\methods_in_details_problem2.dll
+C:\Users\Yadro\source\repos\methods_in_details_problem2\methods_in_details_problem2\obj\Debug\netcoreapp3.0\methods_in_details_problem2.pdb

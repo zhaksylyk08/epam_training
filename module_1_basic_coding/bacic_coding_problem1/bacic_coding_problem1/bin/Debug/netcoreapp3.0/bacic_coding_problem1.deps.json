@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "bacic_coding_problem1/1.0.0": {
+        "runtime": {
+          "bacic_coding_problem1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "bacic_coding_problem1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

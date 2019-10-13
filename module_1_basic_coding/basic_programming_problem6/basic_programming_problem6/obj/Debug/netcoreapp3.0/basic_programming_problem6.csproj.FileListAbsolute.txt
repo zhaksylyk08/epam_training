@@ -1,0 +1,11 @@
+C:\Users\Yadro\source\repos\basic_programming_problem6\basic_programming_problem6\bin\Debug\netcoreapp3.0\basic_programming_problem6.exe
+C:\Users\Yadro\source\repos\basic_programming_problem6\basic_programming_problem6\bin\Debug\netcoreapp3.0\basic_programming_problem6.deps.json
+C:\Users\Yadro\source\repos\basic_programming_problem6\basic_programming_problem6\bin\Debug\netcoreapp3.0\basic_programming_problem6.runtimeconfig.json
+C:\Users\Yadro\source\repos\basic_programming_problem6\basic_programming_problem6\bin\Debug\netcoreapp3.0\basic_programming_problem6.runtimeconfig.dev.json
+C:\Users\Yadro\source\repos\basic_programming_problem6\basic_programming_problem6\bin\Debug\netcoreapp3.0\basic_programming_problem6.dll
+C:\Users\Yadro\source\repos\basic_programming_problem6\basic_programming_problem6\bin\Debug\netcoreapp3.0\basic_programming_problem6.pdb
+C:\Users\Yadro\source\repos\basic_programming_problem6\basic_programming_problem6\obj\Debug\netcoreapp3.0\basic_programming_problem6.csprojAssemblyReference.cache
+C:\Users\Yadro\source\repos\basic_programming_problem6\basic_programming_problem6\obj\Debug\netcoreapp3.0\basic_programming_problem6.AssemblyInfoInputs.cache
+C:\Users\Yadro\source\repos\basic_programming_problem6\basic_programming_problem6\obj\Debug\netcoreapp3.0\basic_programming_problem6.AssemblyInfo.cs
+C:\Users\Yadro\source\repos\basic_programming_problem6\basic_programming_problem6\obj\Debug\netcoreapp3.0\basic_programming_problem6.dll
+C:\Users\Yadro\source\repos\basic_programming_problem6\basic_programming_problem6\obj\Debug\netcoreapp3.0\basic_programming_problem6.pdb

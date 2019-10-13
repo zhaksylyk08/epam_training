@@ -1,0 +1,11 @@
+C:\Users\Yadro\source\repos\basic_coding_problem4\basic_coding_problem4\bin\Debug\netcoreapp3.0\basic_coding_problem4.exe
+C:\Users\Yadro\source\repos\basic_coding_problem4\basic_coding_problem4\bin\Debug\netcoreapp3.0\basic_coding_problem4.deps.json
+C:\Users\Yadro\source\repos\basic_coding_problem4\basic_coding_problem4\bin\Debug\netcoreapp3.0\basic_coding_problem4.runtimeconfig.json
+C:\Users\Yadro\source\repos\basic_coding_problem4\basic_coding_problem4\bin\Debug\netcoreapp3.0\basic_coding_problem4.runtimeconfig.dev.json
+C:\Users\Yadro\source\repos\basic_coding_problem4\basic_coding_problem4\bin\Debug\netcoreapp3.0\basic_coding_problem4.dll
+C:\Users\Yadro\source\repos\basic_coding_problem4\basic_coding_problem4\bin\Debug\netcoreapp3.0\basic_coding_problem4.pdb
+C:\Users\Yadro\source\repos\basic_coding_problem4\basic_coding_problem4\obj\Debug\netcoreapp3.0\basic_coding_problem4.csprojAssemblyReference.cache
+C:\Users\Yadro\source\repos\basic_coding_problem4\basic_coding_problem4\obj\Debug\netcoreapp3.0\basic_coding_problem4.AssemblyInfoInputs.cache
+C:\Users\Yadro\source\repos\basic_coding_problem4\basic_coding_problem4\obj\Debug\netcoreapp3.0\basic_coding_problem4.AssemblyInfo.cs
+C:\Users\Yadro\source\repos\basic_coding_problem4\basic_coding_problem4\obj\Debug\netcoreapp3.0\basic_coding_problem4.dll
+C:\Users\Yadro\source\repos\basic_coding_problem4\basic_coding_problem4\obj\Debug\netcoreapp3.0\basic_coding_problem4.pdb

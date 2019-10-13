@@ -1,0 +1,11 @@
+C:\Users\Yadro\source\repos\basic_coding_problem3\basic_coding_problem3\bin\Debug\netcoreapp3.0\basic_coding_problem3.exe
+C:\Users\Yadro\source\repos\basic_coding_problem3\basic_coding_problem3\bin\Debug\netcoreapp3.0\basic_coding_problem3.deps.json
+C:\Users\Yadro\source\repos\basic_coding_problem3\basic_coding_problem3\bin\Debug\netcoreapp3.0\basic_coding_problem3.runtimeconfig.json
+C:\Users\Yadro\source\repos\basic_coding_problem3\basic_coding_problem3\bin\Debug\netcoreapp3.0\basic_coding_problem3.runtimeconfig.dev.json
+C:\Users\Yadro\source\repos\basic_coding_problem3\basic_coding_problem3\bin\Debug\netcoreapp3.0\basic_coding_problem3.dll
+C:\Users\Yadro\source\repos\basic_coding_problem3\basic_coding_problem3\bin\Debug\netcoreapp3.0\basic_coding_problem3.pdb
+C:\Users\Yadro\source\repos\basic_coding_problem3\basic_coding_problem3\obj\Debug\netcoreapp3.0\basic_coding_problem3.csprojAssemblyReference.cache
+C:\Users\Yadro\source\repos\basic_coding_problem3\basic_coding_problem3\obj\Debug\netcoreapp3.0\basic_coding_problem3.AssemblyInfoInputs.cache
+C:\Users\Yadro\source\repos\basic_coding_problem3\basic_coding_problem3\obj\Debug\netcoreapp3.0\basic_coding_problem3.AssemblyInfo.cs
+C:\Users\Yadro\source\repos\basic_coding_problem3\basic_coding_problem3\obj\Debug\netcoreapp3.0\basic_coding_problem3.dll
+C:\Users\Yadro\source\repos\basic_coding_problem3\basic_coding_problem3\obj\Debug\netcoreapp3.0\basic_coding_problem3.pdb

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "basic_coding_problem3/1.0.0": {
+        "runtime": {
+          "basic_coding_problem3.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "basic_coding_problem3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
