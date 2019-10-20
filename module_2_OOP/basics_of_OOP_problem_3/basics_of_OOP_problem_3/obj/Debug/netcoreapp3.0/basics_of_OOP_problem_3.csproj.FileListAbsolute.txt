@@ -1,0 +1,11 @@
+C:\Users\Yadro\source\repos\basics_of_OOP_problem_3\basics_of_OOP_problem_3\bin\Debug\netcoreapp3.0\basics_of_OOP_problem_3.exe
+C:\Users\Yadro\source\repos\basics_of_OOP_problem_3\basics_of_OOP_problem_3\bin\Debug\netcoreapp3.0\basics_of_OOP_problem_3.deps.json
+C:\Users\Yadro\source\repos\basics_of_OOP_problem_3\basics_of_OOP_problem_3\bin\Debug\netcoreapp3.0\basics_of_OOP_problem_3.runtimeconfig.json
+C:\Users\Yadro\source\repos\basics_of_OOP_problem_3\basics_of_OOP_problem_3\bin\Debug\netcoreapp3.0\basics_of_OOP_problem_3.runtimeconfig.dev.json
+C:\Users\Yadro\source\repos\basics_of_OOP_problem_3\basics_of_OOP_problem_3\bin\Debug\netcoreapp3.0\basics_of_OOP_problem_3.dll
+C:\Users\Yadro\source\repos\basics_of_OOP_problem_3\basics_of_OOP_problem_3\bin\Debug\netcoreapp3.0\basics_of_OOP_problem_3.pdb
+C:\Users\Yadro\source\repos\basics_of_OOP_problem_3\basics_of_OOP_problem_3\obj\Debug\netcoreapp3.0\basics_of_OOP_problem_3.csprojAssemblyReference.cache
+C:\Users\Yadro\source\repos\basics_of_OOP_problem_3\basics_of_OOP_problem_3\obj\Debug\netcoreapp3.0\basics_of_OOP_problem_3.AssemblyInfoInputs.cache
+C:\Users\Yadro\source\repos\basics_of_OOP_problem_3\basics_of_OOP_problem_3\obj\Debug\netcoreapp3.0\basics_of_OOP_problem_3.AssemblyInfo.cs
+C:\Users\Yadro\source\repos\basics_of_OOP_problem_3\basics_of_OOP_problem_3\obj\Debug\netcoreapp3.0\basics_of_OOP_problem_3.dll
+C:\Users\Yadro\source\repos\basics_of_OOP_problem_3\basics_of_OOP_problem_3\obj\Debug\netcoreapp3.0\basics_of_OOP_problem_3.pdb
