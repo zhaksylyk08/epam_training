@@ -4,9 +4,8 @@ using System.Text;
 
 namespace OODesignPrinciplesProblem1
 {
-    class SquareMatrix<T> : Matrix<T>
+    interface IMatrix<T>
     {
-        public SquareMatrix(List<List<T>> matrixElements) : base(matrixElements) { }
-
+        public void ChangeMatrixElement(int i, int j, T newValue);
     }
 }

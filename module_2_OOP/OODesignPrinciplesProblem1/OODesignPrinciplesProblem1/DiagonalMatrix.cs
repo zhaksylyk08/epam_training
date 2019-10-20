@@ -4,8 +4,8 @@ using System.Text;
 
 namespace OODesignPrinciplesProblem1
 {
-    class DiagonalMatrix
+    class DiagonalMatrix<T> : SquareMatrix<T>
     {
-
+        public DiagonalMatrix(List<List<T>> matrixElements) : base(matrixElements) { }
     }
 }

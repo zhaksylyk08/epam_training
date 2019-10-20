@@ -4,8 +4,8 @@ using System.Text;
 
 namespace OODesignPrinciplesProblem1
 {
-    class SymmetricMatrix
+    class SymmetricMatrix<T> : SquareMatrix<T>
     {
-
+        public SymmetricMatrix(List<List<T>> matrixElements) : base(matrixElements) { }
     }
 }
