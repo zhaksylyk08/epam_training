@@ -2,7 +2,7 @@
 
 namespace creating_types_problem2
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {

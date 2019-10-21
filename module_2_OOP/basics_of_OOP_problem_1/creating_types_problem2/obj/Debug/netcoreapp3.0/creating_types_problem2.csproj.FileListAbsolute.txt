@@ -9,3 +9,14 @@ C:\Users\Yadro\source\repos\creating_types_problem2\creating_types_problem2\obj\
 C:\Users\Yadro\source\repos\creating_types_problem2\creating_types_problem2\obj\Debug\netcoreapp3.0\creating_types_problem2.AssemblyInfo.cs
 C:\Users\Yadro\source\repos\creating_types_problem2\creating_types_problem2\obj\Debug\netcoreapp3.0\creating_types_problem2.dll
 C:\Users\Yadro\source\repos\creating_types_problem2\creating_types_problem2\obj\Debug\netcoreapp3.0\creating_types_problem2.pdb
+C:\epam_lab\epam_training\module_2_OOP\basics_of_OOP_problem_1\creating_types_problem2\bin\Debug\netcoreapp3.0\creating_types_problem2.exe
+C:\epam_lab\epam_training\module_2_OOP\basics_of_OOP_problem_1\creating_types_problem2\bin\Debug\netcoreapp3.0\creating_types_problem2.deps.json
+C:\epam_lab\epam_training\module_2_OOP\basics_of_OOP_problem_1\creating_types_problem2\bin\Debug\netcoreapp3.0\creating_types_problem2.runtimeconfig.json
+C:\epam_lab\epam_training\module_2_OOP\basics_of_OOP_problem_1\creating_types_problem2\bin\Debug\netcoreapp3.0\creating_types_problem2.runtimeconfig.dev.json
+C:\epam_lab\epam_training\module_2_OOP\basics_of_OOP_problem_1\creating_types_problem2\bin\Debug\netcoreapp3.0\creating_types_problem2.dll
+C:\epam_lab\epam_training\module_2_OOP\basics_of_OOP_problem_1\creating_types_problem2\bin\Debug\netcoreapp3.0\creating_types_problem2.pdb
+C:\epam_lab\epam_training\module_2_OOP\basics_of_OOP_problem_1\creating_types_problem2\obj\Debug\netcoreapp3.0\creating_types_problem2.csprojAssemblyReference.cache
+C:\epam_lab\epam_training\module_2_OOP\basics_of_OOP_problem_1\creating_types_problem2\obj\Debug\netcoreapp3.0\creating_types_problem2.AssemblyInfoInputs.cache
+C:\epam_lab\epam_training\module_2_OOP\basics_of_OOP_problem_1\creating_types_problem2\obj\Debug\netcoreapp3.0\creating_types_problem2.AssemblyInfo.cs
+C:\epam_lab\epam_training\module_2_OOP\basics_of_OOP_problem_1\creating_types_problem2\obj\Debug\netcoreapp3.0\creating_types_problem2.dll
+C:\epam_lab\epam_training\module_2_OOP\basics_of_OOP_problem_1\creating_types_problem2\obj\Debug\netcoreapp3.0\creating_types_problem2.pdb
