@@ -2,10 +2,10 @@ C:\epam_lab\epam_training\M4. Framework Fundamentals\Framework Fundamentals Prob
 C:\epam_lab\epam_training\M4. Framework Fundamentals\Framework Fundamentals Problems\Problem1\Problem1\bin\Debug\netcoreapp3.0\Problem1.deps.json
 C:\epam_lab\epam_training\M4. Framework Fundamentals\Framework Fundamentals Problems\Problem1\Problem1\bin\Debug\netcoreapp3.0\Problem1.runtimeconfig.json
 C:\epam_lab\epam_training\M4. Framework Fundamentals\Framework Fundamentals Problems\Problem1\Problem1\bin\Debug\netcoreapp3.0\Problem1.runtimeconfig.dev.json
-C:\epam_lab\epam_training\M4. Framework Fundamentals\Framework Fundamentals Problems\Problem1\Problem1\bin\Debug\netcoreapp3.0\Problem1.dll
 C:\epam_lab\epam_training\M4. Framework Fundamentals\Framework Fundamentals Problems\Problem1\Problem1\bin\Debug\netcoreapp3.0\Problem1.pdb
 C:\epam_lab\epam_training\M4. Framework Fundamentals\Framework Fundamentals Problems\Problem1\Problem1\obj\Debug\netcoreapp3.0\Problem1.csprojAssemblyReference.cache
 C:\epam_lab\epam_training\M4. Framework Fundamentals\Framework Fundamentals Problems\Problem1\Problem1\obj\Debug\netcoreapp3.0\Problem1.AssemblyInfoInputs.cache
 C:\epam_lab\epam_training\M4. Framework Fundamentals\Framework Fundamentals Problems\Problem1\Problem1\obj\Debug\netcoreapp3.0\Problem1.AssemblyInfo.cs
 C:\epam_lab\epam_training\M4. Framework Fundamentals\Framework Fundamentals Problems\Problem1\Problem1\obj\Debug\netcoreapp3.0\Problem1.dll
 C:\epam_lab\epam_training\M4. Framework Fundamentals\Framework Fundamentals Problems\Problem1\Problem1\obj\Debug\netcoreapp3.0\Problem1.pdb
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Framework Fundamentals Problems\Problem1\Problem1\bin\Debug\netcoreapp3.0\Problem1.dll
