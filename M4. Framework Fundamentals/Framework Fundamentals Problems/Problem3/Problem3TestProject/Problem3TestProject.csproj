@@ -13,4 +13,10 @@
     <PackageReference Include="coverlet.collector" Version="1.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Problem3">
+      <HintPath>..\Problem3\bin\Debug\netcoreapp3.0\Problem3.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
