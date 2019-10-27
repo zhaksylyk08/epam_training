@@ -4,11 +4,12 @@ namespace methods_in_details_problem2
 {
     class Program
     {
+        delegate int Operation(int x, int y);
         static void Main(string[] args)
         {
-            int res = FindGCD(10, 20, 25); // output has to be 5
-            Console.WriteLine(res);
-
+            Operation del = FindGCDForTwoNums;
+            int result = del.Invoke(10, 20);
+            Console.WriteLine(result);
         }
 
         public static int FindGCDForTwoNums(int a, int b) {

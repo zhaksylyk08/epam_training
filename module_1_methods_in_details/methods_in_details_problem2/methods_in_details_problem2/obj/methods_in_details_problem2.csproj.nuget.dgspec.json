@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yadro\\source\\repos\\methods_in_details_problem2\\methods_in_details_problem2\\methods_in_details_problem2.csproj": {}
+    "C:\\epam_lab\\epam_training\\module_1_methods_in_details\\methods_in_details_problem2\\methods_in_details_problem2\\methods_in_details_problem2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Yadro\\source\\repos\\methods_in_details_problem2\\methods_in_details_problem2\\methods_in_details_problem2.csproj": {
+    "C:\\epam_lab\\epam_training\\module_1_methods_in_details\\methods_in_details_problem2\\methods_in_details_problem2\\methods_in_details_problem2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yadro\\source\\repos\\methods_in_details_problem2\\methods_in_details_problem2\\methods_in_details_problem2.csproj",
+        "projectUniqueName": "C:\\epam_lab\\epam_training\\module_1_methods_in_details\\methods_in_details_problem2\\methods_in_details_problem2\\methods_in_details_problem2.csproj",
         "projectName": "methods_in_details_problem2",
-        "projectPath": "C:\\Users\\Yadro\\source\\repos\\methods_in_details_problem2\\methods_in_details_problem2\\methods_in_details_problem2.csproj",
+        "projectPath": "C:\\epam_lab\\epam_training\\module_1_methods_in_details\\methods_in_details_problem2\\methods_in_details_problem2\\methods_in_details_problem2.csproj",
         "packagesPath": "C:\\Users\\Yadro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yadro\\source\\repos\\methods_in_details_problem2\\methods_in_details_problem2\\obj\\",
+        "outputPath": "C:\\epam_lab\\epam_training\\module_1_methods_in_details\\methods_in_details_problem2\\methods_in_details_problem2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
