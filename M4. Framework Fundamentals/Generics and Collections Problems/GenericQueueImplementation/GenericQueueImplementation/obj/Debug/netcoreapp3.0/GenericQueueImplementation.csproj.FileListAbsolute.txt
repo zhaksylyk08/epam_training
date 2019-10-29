@@ -1,0 +1,11 @@
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericQueueImplementation\GenericQueueImplementation\bin\Debug\netcoreapp3.0\GenericQueueImplementation.exe
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericQueueImplementation\GenericQueueImplementation\bin\Debug\netcoreapp3.0\GenericQueueImplementation.deps.json
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericQueueImplementation\GenericQueueImplementation\bin\Debug\netcoreapp3.0\GenericQueueImplementation.runtimeconfig.json
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericQueueImplementation\GenericQueueImplementation\bin\Debug\netcoreapp3.0\GenericQueueImplementation.runtimeconfig.dev.json
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericQueueImplementation\GenericQueueImplementation\bin\Debug\netcoreapp3.0\GenericQueueImplementation.dll
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericQueueImplementation\GenericQueueImplementation\bin\Debug\netcoreapp3.0\GenericQueueImplementation.pdb
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericQueueImplementation\GenericQueueImplementation\obj\Debug\netcoreapp3.0\GenericQueueImplementation.csprojAssemblyReference.cache
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericQueueImplementation\GenericQueueImplementation\obj\Debug\netcoreapp3.0\GenericQueueImplementation.AssemblyInfoInputs.cache
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericQueueImplementation\GenericQueueImplementation\obj\Debug\netcoreapp3.0\GenericQueueImplementation.AssemblyInfo.cs
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericQueueImplementation\GenericQueueImplementation\obj\Debug\netcoreapp3.0\GenericQueueImplementation.dll
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericQueueImplementation\GenericQueueImplementation\obj\Debug\netcoreapp3.0\GenericQueueImplementation.pdb
