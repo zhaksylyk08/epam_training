@@ -1,0 +1,11 @@
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\ReversePolishCalculatorImplementation\bin\Debug\netcoreapp3.0\ReversePolishCalculatorImplementation.exe
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\ReversePolishCalculatorImplementation\bin\Debug\netcoreapp3.0\ReversePolishCalculatorImplementation.deps.json
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\ReversePolishCalculatorImplementation\bin\Debug\netcoreapp3.0\ReversePolishCalculatorImplementation.runtimeconfig.json
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\ReversePolishCalculatorImplementation\bin\Debug\netcoreapp3.0\ReversePolishCalculatorImplementation.runtimeconfig.dev.json
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\ReversePolishCalculatorImplementation\bin\Debug\netcoreapp3.0\ReversePolishCalculatorImplementation.dll
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\ReversePolishCalculatorImplementation\bin\Debug\netcoreapp3.0\ReversePolishCalculatorImplementation.pdb
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\ReversePolishCalculatorImplementation\obj\Debug\netcoreapp3.0\ReversePolishCalculatorImplementation.AssemblyInfoInputs.cache
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\ReversePolishCalculatorImplementation\obj\Debug\netcoreapp3.0\ReversePolishCalculatorImplementation.AssemblyInfo.cs
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\ReversePolishCalculatorImplementation\obj\Debug\netcoreapp3.0\ReversePolishCalculatorImplementation.dll
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\ReversePolishCalculatorImplementation\obj\Debug\netcoreapp3.0\ReversePolishCalculatorImplementation.pdb
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\ReversePolishCalculatorImplementation\obj\Debug\netcoreapp3.0\ReversePolishCalculatorImplementation.csprojAssemblyReference.cache
