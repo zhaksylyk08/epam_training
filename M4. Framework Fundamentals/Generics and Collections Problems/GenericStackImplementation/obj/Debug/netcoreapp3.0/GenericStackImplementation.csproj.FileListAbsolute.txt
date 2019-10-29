@@ -1,0 +1,10 @@
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericStackImplementation\bin\Debug\netcoreapp3.0\GenericStackImplementation.exe
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericStackImplementation\bin\Debug\netcoreapp3.0\GenericStackImplementation.deps.json
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericStackImplementation\bin\Debug\netcoreapp3.0\GenericStackImplementation.runtimeconfig.json
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericStackImplementation\bin\Debug\netcoreapp3.0\GenericStackImplementation.runtimeconfig.dev.json
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericStackImplementation\bin\Debug\netcoreapp3.0\GenericStackImplementation.dll
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericStackImplementation\bin\Debug\netcoreapp3.0\GenericStackImplementation.pdb
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericStackImplementation\obj\Debug\netcoreapp3.0\GenericStackImplementation.AssemblyInfoInputs.cache
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericStackImplementation\obj\Debug\netcoreapp3.0\GenericStackImplementation.AssemblyInfo.cs
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericStackImplementation\obj\Debug\netcoreapp3.0\GenericStackImplementation.dll
+C:\epam_lab\epam_training\M4. Framework Fundamentals\Generics and Collections Problems\GenericStackImplementation\obj\Debug\netcoreapp3.0\GenericStackImplementation.pdb
