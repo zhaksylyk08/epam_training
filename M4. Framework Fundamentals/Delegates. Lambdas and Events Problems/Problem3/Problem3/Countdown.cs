@@ -6,9 +6,13 @@ namespace Problem3
 {
     public class Countdown
     {
-        delegate void AccountHandler(string message);
-        event AccountHandler Notify;
+        delegate void WaitingTimeHandler(string message);
+        event WaitingTimeHandler Notify;
 
+        public void DisplayMessage(string message) 
+        {
+            Console.WriteLine(message);
+        }
         
     }
 }
