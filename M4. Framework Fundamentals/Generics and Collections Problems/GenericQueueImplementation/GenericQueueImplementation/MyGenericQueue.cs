@@ -5,22 +5,63 @@ using System.Text;
 
 namespace GenericQueueImplementation
 {
-    public class MyGenericQueue<T> : ICollection
+    public class MyGenericQueue<T>: IEnumerable<T>
     {
-        public int Count => throw new NotImplementedException();
+        private T[] queue;
+        private int size,
+                    capacity,
+                    front,
+                    last;
 
-        public bool IsSynchronized => throw new NotImplementedException();
-
-        public object SyncRoot => throw new NotImplementedException();
-
-        public void CopyTo(Array array, int index)
+        public int Count { get { return size; } }
+        public MyGenericQueue(int size) 
         {
-            throw new NotImplementedException();
+            queue = new T[size];
+            front = last = 0;
+            capacity = size;
+            this.size = 0;
         }
 
-        public IEnumerator GetEnumerator()
+        public void Enqueue(T data) 
         {
-            throw new NotImplementedException();
+            // checking if array is full
+            if (last == capacity)
+            {
+               var newQueue = new T[2 * capacity];
+                for (int i = front; i < size; i++)
+                    newQueue[i] = queue[i];
+                queue = newQueue;
+                capacity *= 2;
+            }
+
+            queue[last] = data;
+            last++;
+            size++;
+        }
+
+        public T Dequeue() 
+        {
+            if (size == 0)
+                throw new OutOfMemoryException("MyGenericQueue is empty");
+
+            T el = queue[front];
+            front++;
+            size--;
+
+            return el;
+        }
+
+        public T Peek() => queue[front];
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for(int i = front; i < last; i++)
+                yield return queue[i]; 
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
