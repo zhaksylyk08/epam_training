@@ -1,0 +1,6 @@
+C:\epam_lab\epam_training\ALA-05\Problem1\bin\Debug\Problem1.exe.config
+C:\epam_lab\epam_training\ALA-05\Problem1\bin\Debug\Problem1.exe
+C:\epam_lab\epam_training\ALA-05\Problem1\bin\Debug\Problem1.pdb
+C:\epam_lab\epam_training\ALA-05\Problem1\obj\Debug\Problem1.csprojAssemblyReference.cache
+C:\epam_lab\epam_training\ALA-05\Problem1\obj\Debug\Problem1.exe
+C:\epam_lab\epam_training\ALA-05\Problem1\obj\Debug\Problem1.pdb
