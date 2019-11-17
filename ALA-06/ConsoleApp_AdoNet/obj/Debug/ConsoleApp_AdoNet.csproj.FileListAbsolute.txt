@@ -1,0 +1,6 @@
+C:\epam_lab\epam_training\ALA-06\ConsoleApp_AdoNet\bin\Debug\ConsoleApp_AdoNet.exe.config
+C:\epam_lab\epam_training\ALA-06\ConsoleApp_AdoNet\bin\Debug\ConsoleApp_AdoNet.exe
+C:\epam_lab\epam_training\ALA-06\ConsoleApp_AdoNet\bin\Debug\ConsoleApp_AdoNet.pdb
+C:\epam_lab\epam_training\ALA-06\ConsoleApp_AdoNet\obj\Debug\ConsoleApp_AdoNet.csprojAssemblyReference.cache
+C:\epam_lab\epam_training\ALA-06\ConsoleApp_AdoNet\obj\Debug\ConsoleApp_AdoNet.exe
+C:\epam_lab\epam_training\ALA-06\ConsoleApp_AdoNet\obj\Debug\ConsoleApp_AdoNet.pdb
