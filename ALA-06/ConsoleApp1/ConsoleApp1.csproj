@@ -56,7 +56,7 @@
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="OnlineShopContext.cs" />
+    <Compile Include="EFStuff\OnlineShopContext.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Seller.cs" />
