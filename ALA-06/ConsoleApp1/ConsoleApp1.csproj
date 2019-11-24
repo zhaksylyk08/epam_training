@@ -53,13 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OnlineShop\Cart.cs" />
-    <Compile Include="OnlineShop\Comment.cs" />
-    <Compile Include="OnlineShop\Customer.cs" />
-    <Compile Include="OnlineShop\OnlineShopContext.cs" />
-    <Compile Include="OnlineShop\Order.cs" />
-    <Compile Include="OnlineShop\Product.cs" />
-    <Compile Include="OnlineShop\Seller.cs" />
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="OnlineShopContext.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Seller.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
