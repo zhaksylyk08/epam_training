@@ -16,5 +16,7 @@ namespace WebApp2.Models
         public int Age { get; set; }
 
         public string ImageUrl { get; set; }
+
+        public IList<UserAward> UserAwards { get; set; }
     }
 }

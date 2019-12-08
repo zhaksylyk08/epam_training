@@ -1,0 +1,55 @@
+﻿@model IEnumerable<WebApp2.Models.Award>
+
+@{
+    ViewData["Title"] = "Awards List";
+}
+
+<h2>Awards List</h2>
+
+<p>
+    <a asp-action="AddAward">Add New Award</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Image
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AwardId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@Url.Content("~/images/awards/")/@item.ImageUrl" height="40px" ; width="40px" ;>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AwardId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.AwardId">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.AwardId">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

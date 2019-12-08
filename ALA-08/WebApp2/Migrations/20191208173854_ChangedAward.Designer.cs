@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApp2.EFData;
 
 namespace WebApp2.Migrations
 {
     [DbContext(typeof(WebAppContext))]
-    partial class WebAppContextModelSnapshot : ModelSnapshot
+    [Migration("20191208173854_ChangedAward")]
+    partial class ChangedAward
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,36 +64,6 @@ namespace WebApp2.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("WebApp2.Models.UserAward", b =>
-                {
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("AwardId")
-                        .HasColumnType("int");
-
-                    b.HasKey("UserId", "AwardId");
-
-                    b.HasIndex("AwardId");
-
-                    b.ToTable("UserAwards");
-                });
-
-            modelBuilder.Entity("WebApp2.Models.UserAward", b =>
-                {
-                    b.HasOne("WebApp2.Models.Award", "Award")
-                        .WithMany("UserAwards")
-                        .HasForeignKey("AwardId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("WebApp2.Models.User", "User")
-                        .WithMany("UserAwards")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

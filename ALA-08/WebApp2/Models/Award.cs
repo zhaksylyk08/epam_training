@@ -10,5 +10,8 @@ namespace WebApp2.Models
         public int AwardId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+        public string ImageUrl { get; set; }
+
+        public IList<UserAward> UserAwards { get; set; }
     }
 }

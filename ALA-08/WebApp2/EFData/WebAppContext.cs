@@ -16,5 +16,12 @@ namespace WebApp2.EFData
 
         public DbSet<User> Users { get; set; }
         public DbSet<Award> Awards { get; set; }
+        public DbSet<UserAward> UserAwards { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<UserAward>()
+                                .HasKey(ua => new { ua.UserId, ua.AwardId });
+        }
     }
 }
