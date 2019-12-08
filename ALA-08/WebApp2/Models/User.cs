@@ -15,5 +15,6 @@ namespace WebApp2.Models
         public DateTime Birthdate { get; set; }
         public int Age { get; set; }
 
+        public string ImageUrl { get; set; }
     }
 }

@@ -138,3 +138,4 @@ C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\WebApp2.MvcAppl
 C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\User\Index.cshtml.g.cs
 C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\User\AddUser.cshtml.g.cs
 C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\User\Delete.cshtml.g.cs
+C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\User\Edit.cshtml.g.cs

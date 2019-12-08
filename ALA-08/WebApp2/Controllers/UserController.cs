@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using WebApp2.EFData;
 using WebApp2.Models;
@@ -11,10 +13,12 @@ namespace WebApp2.Controllers
     public class UserController : Controller
     {
         private WebAppContext _webAppContext;
+        private readonly IHostingEnvironment _hostingEnvironment;
 
-        public UserController(WebAppContext webAppContext)
+        public UserController(WebAppContext webAppContext, IHostingEnvironment hostingEnvironment)
         {
             _webAppContext = webAppContext;
+            _hostingEnvironment = hostingEnvironment;
         }
         public IActionResult Index()
         {
@@ -46,14 +50,40 @@ namespace WebApp2.Controllers
         [HttpPost]
         public IActionResult AddUser(User user)
         {
-            if (ModelState.IsValid)
+            /*if (ModelState.IsValid)
             {
                 _webAppContext.Add(user);
                 _webAppContext.SaveChanges();
+
                 return RedirectToAction("Index");
             }
 
-            return View();
+            return View();*/
+
+            if (ModelState.IsValid)
+            {
+                var file = HttpContext.Request.Form.Files.FirstOrDefault();
+
+                if (file != null)
+                {
+                    var path = Path.Combine(_hostingEnvironment.ContentRootPath, "wwwroot", "images", "users", file.FileName);
+                    using (var fileStream = new FileStream(path, FileMode.Create))
+                    {
+                        file.OpenReadStream().CopyTo(fileStream);
+                        user.ImageUrl = file.FileName;
+                    }
+                }
+                else 
+                {
+                    //ModelState.AddModelError("ImageUrl", "Image is very important");
+                    user.ImageUrl = "default_img.jpg";
+                }
+            }
+
+            _webAppContext.Users.Add(user);
+            _webAppContext.SaveChanges();
+
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -78,7 +108,43 @@ namespace WebApp2.Controllers
         public IActionResult Delete(int id)
         {
             var user = _webAppContext.Users.Find(id);
+
             _webAppContext.Users.Remove(user);
+            _webAppContext.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var user = _webAppContext.Users
+                        .Where(u => u.UserId == id)
+                        .FirstOrDefault<User>();
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return View(user);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, User user2)
+        {
+            var user = _webAppContext.Users.Find(id);
+
+            user.Name = user2.Name;
+            user.Birthdate = user2.Birthdate;
+            user.Age = user2.Age;
+
+            _webAppContext.Users.Update(user);
             _webAppContext.SaveChanges();
             return RedirectToAction("Index");
         }
