@@ -5,8 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using WebApp2.EFData;
-using WebApp2.Models;
+using DAL.EFData;
+using DAL.Models;
 
 namespace WebApp2.Controllers
 {
@@ -42,7 +42,7 @@ namespace WebApp2.Controllers
 
                 if (file != null)
                 {
-                    var path = Path.Combine(_hostingEnvironment.ContentRootPath, "wwwroot", "images", ssss"awards", file.FileName);
+                    var path = Path.Combine(_hostingEnvironment.ContentRootPath, "wwwroot", "images", "awards", file.FileName);
                     using (var fileStream = new FileStream(path, FileMode.Create))
                     {
                         file.OpenReadStream().CopyTo(fileStream);

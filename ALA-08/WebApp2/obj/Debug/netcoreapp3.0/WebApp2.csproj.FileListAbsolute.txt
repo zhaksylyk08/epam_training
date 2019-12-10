@@ -141,3 +141,11 @@ C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\Use
 C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\User\Edit.cshtml.g.cs
 C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\Award\AddAward.cshtml.g.cs
 C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\Award\Index.cshtml.g.cs
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Microsoft.Bcl.HashCode.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\System.Collections.Immutable.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\System.ComponentModel.Annotations.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\System.Diagnostics.DiagnosticSource.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\DAL.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\DAL.pdb

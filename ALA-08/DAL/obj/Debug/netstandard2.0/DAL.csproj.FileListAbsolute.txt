@@ -1,0 +1,8 @@
+C:\epam_lab\epam_training\ALA-08\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+C:\epam_lab\epam_training\ALA-08\DAL\bin\Debug\netstandard2.0\DAL.dll
+C:\epam_lab\epam_training\ALA-08\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+C:\epam_lab\epam_training\ALA-08\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+C:\epam_lab\epam_training\ALA-08\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+C:\epam_lab\epam_training\ALA-08\DAL\bin\Debug\netstandard2.0\DAL.pdb
+C:\epam_lab\epam_training\ALA-08\DAL\obj\Debug\netstandard2.0\DAL.dll
+C:\epam_lab\epam_training\ALA-08\DAL\obj\Debug\netstandard2.0\DAL.pdb

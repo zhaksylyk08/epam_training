@@ -1,11 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using WebApp2.Models;
+using System.Text;
+using DAL.Models;
 
-namespace WebApp2.EFData
+namespace DAL.EFData
 {
     public class WebAppContext: DbContext
     {

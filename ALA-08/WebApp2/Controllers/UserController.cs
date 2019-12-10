@@ -5,8 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using WebApp2.EFData;
-using WebApp2.Models;
+using DAL.EFData;
+using DAL.Models;
 
 namespace WebApp2.Controllers
 {
