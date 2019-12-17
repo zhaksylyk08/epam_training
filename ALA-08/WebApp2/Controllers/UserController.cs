@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using DAL.EFData;
 using DAL.Models;
+using WebApp2.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApp2.Controllers
 {
@@ -22,24 +24,17 @@ namespace WebApp2.Controllers
         }
         public IActionResult Index()
         {
-            var users = _webAppContext.Users.ToList();
-            return View(users);
+            var viewModel = new IndexViewModel();
+
+            viewModel.Users = _webAppContext.Users
+                              .Include(user => user.UserAwards)
+                                .ThenInclude(user => user.Award)
+                              .OrderBy(user => user.Name)
+                              .ToList();
+                                                                
+            return View(viewModel);
+
         }
-
-        /*public IActionResult AddUser()
-        {
-            var user = new User()
-            {
-                Name = "John",
-                Birthdate = new DateTime(1996, 5, 12),
-                Age = 23
-            };
-
-            _webAppContext.Users.Add(user);
-            _webAppContext.SaveChanges();
-
-            return RedirectToAction("Index");
-        }*/
 
         [HttpGet]
         public IActionResult AddUser()
@@ -50,16 +45,6 @@ namespace WebApp2.Controllers
         [HttpPost]
         public IActionResult AddUser(User user)
         {
-            /*if (ModelState.IsValid)
-            {
-                _webAppContext.Add(user);
-                _webAppContext.SaveChanges();
-
-                return RedirectToAction("Index");
-            }
-
-            return View();*/
-
             if (ModelState.IsValid)
             {
                 var file = HttpContext.Request.Form.Files.FirstOrDefault();

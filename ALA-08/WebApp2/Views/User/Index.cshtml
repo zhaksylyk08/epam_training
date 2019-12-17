@@ -1,4 +1,6 @@
-﻿@model IEnumerable<DAL.Models.User>
+﻿@using DAL.Models
+@using WebApp2.ViewModels
+@model IndexViewModel
 
 @{
     ViewData["Title"] = "Users List";
@@ -13,42 +15,29 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                Photo
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Birthdate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Age)
-            </th>
+            <th>Photo</th>
+            <th>Name</th>
+            <th>Awards</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var item in Model.Users)
         {
         <tr>
            <td>
-               <img src="@Url.Content("~/images/users/")/@item.ImageUrl" height="40px"; width="40px";>
+               <img src="@Url.Content("~/images/users/")/@item.ImageUrl" height="40px"; width="40px"/>
            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserId)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Birthdate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Age)
+                @{
+                    foreach (var award in item.UserAwards)
+                    {
+                        @award.Award.Title<br />
+                    }
+                 }
             </td>
             <td>
                 <a asp-action="Delete" asp-route-id="@item.UserId">Delete</a>

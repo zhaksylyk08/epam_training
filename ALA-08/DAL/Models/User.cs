@@ -16,6 +16,6 @@ namespace DAL.Models
 
         public string ImageUrl { get; set; }
 
-        public IList<UserAward> UserAwards { get; set; }
+        public ICollection<UserAward> UserAwards { get; set; }
     }
 }
