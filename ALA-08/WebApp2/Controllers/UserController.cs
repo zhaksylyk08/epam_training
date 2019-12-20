@@ -9,6 +9,7 @@ using DAL.EFData;
 using DAL.Models;
 using WebApp2.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace WebApp2.Controllers
 {
@@ -22,15 +23,15 @@ namespace WebApp2.Controllers
             _webAppContext = webAppContext;
             _hostingEnvironment = hostingEnvironment;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             var viewModel = new IndexViewModel();
 
-            viewModel.Users = _webAppContext.Users
+            viewModel.Users = await _webAppContext.Users
                               .Include(user => user.UserAwards)
                                 .ThenInclude(user => user.Award)
                               .OrderBy(user => user.Name)
-                              .ToList();
+                              .ToListAsync();
                                                                 
             return View(viewModel);
 
@@ -39,12 +40,33 @@ namespace WebApp2.Controllers
         [HttpGet]
         public IActionResult AddUser()
         {
+            //PopulateAwardsDropDownList();
+            var user = new User();
+            user.UserAwards = new List<UserAward>();
+            PopulateAssignedAwardData(user);
+
             return View();
         }
 
         [HttpPost]
-        public IActionResult AddUser(User user)
+        public IActionResult AddUser(UserViewModel userViewModel, string[] selectedAwards)
         {
+            var user = new User
+            {
+                Name = userViewModel.Name,
+                Birthdate = userViewModel.Birthdate,
+                Age = userViewModel.Age
+            };
+
+            if (selectedAwards != null)
+            {
+                user.UserAwards = new List<UserAward>();
+                foreach (var award in selectedAwards)
+                {
+                    var awardToAdd = new UserAward { UserId = user.UserId, AwardId = int.Parse(award) };
+                    user.UserAwards.Add(awardToAdd);
+                }
+            }
             if (ModelState.IsValid)
             {
                 var file = HttpContext.Request.Form.Files.FirstOrDefault();
@@ -63,12 +85,14 @@ namespace WebApp2.Controllers
                     //ModelState.AddModelError("ImageUrl", "Image is very important");
                     user.ImageUrl = "default_img.jpg";
                 }
+
+                _webAppContext.Users.Add(user);
+                _webAppContext.SaveChanges();
+                return RedirectToAction("Index");
             }
 
-            _webAppContext.Users.Add(user);
-            _webAppContext.SaveChanges();
-
-            return RedirectToAction("Index");
+            PopulateAssignedAwardData(user);
+            return View(user);
         }
 
         [HttpGet]
@@ -132,6 +156,54 @@ namespace WebApp2.Controllers
             _webAppContext.Users.Update(user);
             _webAppContext.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var user = await _webAppContext.Users
+                .Include(user => user.UserAwards)
+                    .ThenInclude(user => user.Award)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(user => user.UserId == id);
+
+            if (user == null) 
+            {
+                return NotFound();
+            }
+
+            return View(user);
+        }
+
+        /*private void PopulateAwardsDropDownList(object selectedAward = null)
+        {
+            var awardsQuery = from award in _webAppContext.Awards
+                              orderby award.Title
+                              select award;
+            ViewBag.AwardId = new SelectList(awardsQuery.AsNoTracking(), "AwardId", "Title", selectedAward);
+        }*/
+
+        private void PopulateAssignedAwardData(User user)
+        {
+            var allAwards = _webAppContext.Awards;
+            var userAwards = new HashSet<int>(user.UserAwards.Select(u => u.AwardId));
+            var viewModel = new List<AssignedAwardData>();
+
+            foreach (var award in allAwards)
+            {
+                viewModel.Add(new AssignedAwardData
+                {
+                    AwardId = award.AwardId,
+                    Title = award.Title,
+                    Assigned = userAwards.Contains(award.AwardId)
+                });
+            }
+
+            ViewData["Awards"] = viewModel;
         }
     }
 }

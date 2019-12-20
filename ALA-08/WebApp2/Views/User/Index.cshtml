@@ -26,7 +26,7 @@
         {
         <tr>
            <td>
-               <img src="@Url.Content("~/images/users/")/@item.ImageUrl" height="40px"; width="40px"/>
+               <img src="@Url.Content("~/images/users/")/@item.ImageUrl" height="60px"; width="60px"/>
            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
@@ -35,12 +35,13 @@
                 @{
                     foreach (var award in item.UserAwards)
                     {
-                        @award.Award.Title<br />
+                        <img src="@Url.Content("~/images/awards/")/@award.Award.ImageUrl" height="40px" width="40px"><br />
                     }
                  }
             </td>
             <td>
-                <a asp-action="Delete" asp-route-id="@item.UserId">Delete</a>
+                <a asp-action="Details" asp-route-id="@item.UserId">Details</a>|
+                <a asp-action="Delete" asp-route-id="@item.UserId">Delete</a>|
                 <a asp-action="Edit" asp-route-id="@item.UserId">Edit</a>
             </td>
         </tr>

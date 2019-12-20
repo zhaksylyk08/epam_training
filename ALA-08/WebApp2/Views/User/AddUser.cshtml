@@ -29,8 +29,38 @@
             </div>
             <div class="form-group">
                 <label asp-for="ImageUrl" class="control-label"></label>
-                <input asp-for="ImageUrl" name="file" id="file" type="file"/>
+                <input asp-for="ImageUrl" name="file" id="file" type="file" />
             </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <table>
+                        <tr>
+                            @{
+                                int cnt = 0;
+                                List<WebApp2.ViewModels.AssignedAwardData> awards = ViewBag.Awards;
+
+                                foreach (var award in awards)
+                                {
+                                    if (cnt++ % 3 == 0)
+                                    {
+                                    @:</tr><tr>
+                                    }
+
+                                    @:<td>
+                                        <input type="checkbox"
+                                               name="selectedAwards"
+                                               value="@award.AwardId"
+                                               @(Html.Raw(award.Assigned ? "checked=\"checked\"" : "")) />
+                                        @award.AwardId @: @award.Title
+                                    @:</td>
+                                }
+                            }
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Add" class="btn btn-primary" />
             </div>

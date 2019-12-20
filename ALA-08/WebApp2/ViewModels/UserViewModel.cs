@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DAL.Models;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace WebApp2.ViewModels
@@ -20,6 +22,6 @@ namespace WebApp2.ViewModels
 
         public string ImageUrl { get; set; }
 
-
+        public IEnumerable<Award> Awards{ get; set; }
     }
 }

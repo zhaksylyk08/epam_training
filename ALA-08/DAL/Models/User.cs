@@ -14,8 +14,10 @@ namespace DAL.Models
         public DateTime Birthdate { get; set; }
         public int Age { get; set; }
 
+        [Display(Name="Photo")]
         public string ImageUrl { get; set; }
 
+        [Display(Name="Awards")]
         public ICollection<UserAward> UserAwards { get; set; }
     }
 }
