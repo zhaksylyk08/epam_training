@@ -40,7 +40,6 @@ namespace WebApp2.Controllers
         [HttpGet]
         public IActionResult AddUser()
         {
-            //PopulateAwardsDropDownList();
             var user = new User();
             user.UserAwards = new List<UserAward>();
             PopulateAssignedAwardData(user);
@@ -133,29 +132,35 @@ namespace WebApp2.Controllers
             }
 
             var user = _webAppContext.Users
-                        .Where(u => u.UserId == id)
-                        .FirstOrDefault<User>();
+                        .Include(user => user.UserAwards)
+                            .ThenInclude(user => user.Award)
+                        .FirstOrDefault(user => user.UserId == id);
 
             if (user == null)
             {
                 return NotFound();
             }
 
+            PopulateAssignedAwardData(user);
             return View(user);
         }
 
         [HttpPost]
-        public IActionResult Edit(int id, User user2)
+        public IActionResult Edit(int? id, string[] selectedAwards)
         {
-            var user = _webAppContext.Users.Find(id);
+            if (id == null) 
+            {
+                return NotFound();
+            }
 
-            user.Name = user2.Name;
-            user.Birthdate = user2.Birthdate;
-            user.Age = user2.Age;
+            var userToUpdate = _webAppContext.Users
+                                .Include(user => user.UserAwards)
+                                    .ThenInclude(user => user.Award)
+                                .FirstOrDefault(user => user.UserId == id);
 
-            _webAppContext.Users.Update(user);
+            UpdateUserAwards(selectedAwards, userToUpdate);
             _webAppContext.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
 
         public async Task<IActionResult> Details(int? id)
@@ -179,14 +184,6 @@ namespace WebApp2.Controllers
             return View(user);
         }
 
-        /*private void PopulateAwardsDropDownList(object selectedAward = null)
-        {
-            var awardsQuery = from award in _webAppContext.Awards
-                              orderby award.Title
-                              select award;
-            ViewBag.AwardId = new SelectList(awardsQuery.AsNoTracking(), "AwardId", "Title", selectedAward);
-        }*/
-
         private void PopulateAssignedAwardData(User user)
         {
             var allAwards = _webAppContext.Awards;
@@ -204,6 +201,39 @@ namespace WebApp2.Controllers
             }
 
             ViewData["Awards"] = viewModel;
+        }
+
+        private void UpdateUserAwards(string[] selectedAwards, User userToUpdate)
+        {
+            if (selectedAwards == null) 
+            {
+                userToUpdate.UserAwards = new List<UserAward>();
+                return;
+            }
+
+            var selectedAwardsHS = new HashSet<string>(selectedAwards);
+            var userAwards = new HashSet<int>
+                (userToUpdate.UserAwards.Select(user => user.AwardId));
+
+            foreach (var award in _webAppContext.Awards)
+            {
+                if (selectedAwardsHS.Contains(award.AwardId.ToString()))
+                {
+                    if (!userAwards.Contains(award.AwardId))
+                    {
+                        userToUpdate.UserAwards.Add(new UserAward { UserId = userToUpdate.UserId, AwardId = award.AwardId });
+                    }
+                }
+                else
+                {
+                    if (userAwards.Contains(award.AwardId))
+                    {
+                        UserAward awardToRemove = userToUpdate.UserAwards
+                                                    .FirstOrDefault(a => a.AwardId == award.AwardId);
+                        _webAppContext.Remove(awardToRemove);
+                    }
+                }
+            }
         }
     }
 }
