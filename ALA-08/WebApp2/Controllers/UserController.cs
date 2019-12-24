@@ -196,7 +196,7 @@ namespace WebApp2.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        [Route("user/{id}")]
+        [Route("user/{id}/details")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -211,6 +211,25 @@ namespace WebApp2.Controllers
                 .FirstOrDefaultAsync(user => user.UserId == id);
 
             if (user == null) 
+            {
+                return NotFound();
+            }
+
+            return View(user);
+        }
+
+        [Route("user/{name}")]
+        public IActionResult GetUserByName(string name)
+        {
+            var user = _webAppContext.Users
+                        .Where(user => user.Name == name)
+                        .Include(user => user.UserAwards)
+                          .ThenInclude(user => user.Award)
+                        .AsNoTracking()
+                        .OrderBy(user => user.Birthdate)
+                        .FirstOrDefault();
+
+            if (user == null)
             {
                 return NotFound();
             }

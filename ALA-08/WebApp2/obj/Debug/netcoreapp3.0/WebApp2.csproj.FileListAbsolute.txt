@@ -150,3 +150,4 @@ C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\System.Runtime.
 C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\DAL.dll
 C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\DAL.pdb
 C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\User\Details.cshtml.g.cs
+C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\User\GetUserByName.cshtml.g.cs
