@@ -23,6 +23,8 @@ namespace WebApp2.Controllers
             _webAppContext = webAppContext;
             _hostingEnvironment = hostingEnvironment;
         }
+
+        [Route("/users")]
         public async Task<IActionResult> Index()
         {
             var viewModel = new IndexViewModel();
@@ -32,12 +34,43 @@ namespace WebApp2.Controllers
                                 .ThenInclude(user => user.Award)
                               .OrderBy(user => user.Name)
                               .ToListAsync();
-                                                                
+
             return View(viewModel);
 
         }
 
-        [HttpGet]
+        [Route("/users/{name}")]
+        public async Task<IActionResult> Index(string name)
+        {
+            var viewModel = new IndexViewModel();
+
+            viewModel.Users = await _webAppContext.Users
+                              .Include(user => user.UserAwards)
+                                .ThenInclude(user => user.Award)
+                              .Where(user => user.Name == name)
+                              .OrderBy(user => user.Name)
+                              .ToListAsync();
+
+            return View(viewModel);
+
+        }
+
+        [Route("users/{firstLetter:length(1)}")]
+        public async Task<IActionResult> Index(char firstLetter)
+        {
+            var viewModel = new IndexViewModel();
+
+            viewModel.Users = await _webAppContext.Users
+                              .Include(user => user.UserAwards)
+                                .ThenInclude(user => user.Award)
+                              .Where(user => user.Name.Substring(0,1) == firstLetter.ToString())
+                              .OrderBy(user => user.Name)
+                              .ToListAsync();
+
+            return View(viewModel);
+        }
+
+        [HttpGet("/create-user")]
         public IActionResult AddUser()
         {
             var user = new User();
@@ -47,7 +80,7 @@ namespace WebApp2.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost("/create-user")]
         public IActionResult AddUser(UserViewModel userViewModel, string[] selectedAwards)
         {
             var user = new User
@@ -79,7 +112,7 @@ namespace WebApp2.Controllers
                         user.ImageUrl = file.FileName;
                     }
                 }
-                else 
+                else
                 {
                     //ModelState.AddModelError("ImageUrl", "Image is very important");
                     user.ImageUrl = "default_img.jpg";
@@ -94,7 +127,7 @@ namespace WebApp2.Controllers
             return View(user);
         }
 
-        [HttpGet]
+        [HttpGet("user/{id}/delete")]
         public IActionResult Delete(int? id)
         {
             if (id == null)
@@ -112,7 +145,7 @@ namespace WebApp2.Controllers
             return View(user);
         }
 
-        [HttpPost]
+        [HttpPost("user/{id}/delete")]
         public IActionResult Delete(int id)
         {
             var user = _webAppContext.Users.Find(id);
@@ -123,7 +156,7 @@ namespace WebApp2.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet]
+        [HttpGet("/user/{id}/edit")]
         public IActionResult Edit(int? id)
         {
             if (id == null)
@@ -145,10 +178,10 @@ namespace WebApp2.Controllers
             return View(user);
         }
 
-        [HttpPost]
+        [HttpPost("/user/{id}/edit")]
         public IActionResult Edit(int? id, string[] selectedAwards)
         {
-            if (id == null) 
+            if (id == null)
             {
                 return NotFound();
             }
@@ -163,6 +196,7 @@ namespace WebApp2.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Route("user/{id}")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -235,5 +269,6 @@ namespace WebApp2.Controllers
                 }
             }
         }
+
     }
 }

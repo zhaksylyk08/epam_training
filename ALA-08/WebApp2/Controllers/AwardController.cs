@@ -20,6 +20,8 @@ namespace WebApp2.Controllers
             _webAppContext = webAppContext;
             _hostingEnvironment = hostingEnvironment;
         }
+
+        [Route("/awards")]
         public IActionResult Index()
         {
             var awards = _webAppContext.Awards.ToList();
@@ -27,13 +29,13 @@ namespace WebApp2.Controllers
             return View(awards);
         }
 
-        [HttpGet]
+        [HttpGet("/create-award")]
         public IActionResult AddAward()
         {
             return View();
         }
 
-        [HttpPost]
+        [HttpPost("/create-award")]
         public IActionResult AddAward(Award award)
         {
             if (ModelState.IsValid)
