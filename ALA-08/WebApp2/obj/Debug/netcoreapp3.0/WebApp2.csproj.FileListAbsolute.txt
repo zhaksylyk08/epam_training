@@ -134,7 +134,6 @@ C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\ru\Microsoft.Co
 C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\WebApp2.MvcApplicationPartsAssemblyInfo.cache
 C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\User\Index.cshtml.g.cs
 C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\User\AddUser.cshtml.g.cs
 C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\User\Delete.cshtml.g.cs
@@ -151,3 +150,19 @@ C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\DAL.dll
 C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\DAL.pdb
 C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\User\Details.cshtml.g.cs
 C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\User\GetUserByName.cshtml.g.cs
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Microsoft.AspNet.Identity.Core.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Identity.Core.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Identity.Stores.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Microsoft.AspNet.Identity.Owin.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Microsoft.Owin.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Microsoft.Owin.Security.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Microsoft.Owin.Security.Cookies.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Microsoft.Owin.Security.OAuth.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Owin.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\System.Net.Http.Formatting.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Microsoft.Owin.Host.SystemWeb.dll
+C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\WebApp2.MvcApplicationPartsAssemblyInfo.cache

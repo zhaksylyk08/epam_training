@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using DAL.EFData;
+using DAL.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace WebApp2
 {
@@ -27,8 +29,11 @@ namespace WebApp2
         {
             services.AddControllersWithViews();
 
-            var connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=WebApp2;Integrated Security=True";
+            var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<WebAppContext>(options => options.UseSqlServer(connectionString));
+
+            services.AddIdentity<Account, IdentityRole>()
+                .AddEntityFrameworkStores<WebAppContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +54,7 @@ namespace WebApp2
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
