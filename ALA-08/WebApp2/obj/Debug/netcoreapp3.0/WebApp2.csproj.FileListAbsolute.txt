@@ -166,3 +166,4 @@ C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\System.Net.Http
 C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
 C:\epam_lab\epam_training\ALA-08\WebApp2\bin\Debug\netcoreapp3.0\Microsoft.Owin.Host.SystemWeb.dll
 C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\WebApp2.MvcApplicationPartsAssemblyInfo.cache
+C:\epam_lab\epam_training\ALA-08\WebApp2\obj\Debug\netcoreapp3.0\Razor\Views\Account\Register.cshtml.g.cs
