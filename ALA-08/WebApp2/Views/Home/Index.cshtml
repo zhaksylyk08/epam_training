@@ -6,17 +6,3 @@
     <h1>EPAM .NET C# Development Course</h1>
     <h2>ALA-07 HW</h2>
 </div>
-
-@if (User.Identity.IsAuthenticated)
-{
-    <p>@User.Identity.Name</p>
-
-    <form method="post" asp-controller="Account" asp-action="Logout">
-        <input type="submit"  value="Logout"/>
-    </form>
-}
-else
-{
-    <a asp-controller="Account" asp-action="Login">Login</a>
-    <a asp-controller="Account" asp-action="Register">Register</a>
-}

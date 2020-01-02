@@ -32,7 +32,11 @@ namespace WebApp2
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<WebAppContext>(options => options.UseSqlServer(connectionString));
 
-            services.AddIdentity<Account, IdentityRole>()
+            services.AddIdentity<Account, IdentityRole>(opts => {
+                opts.User.RequireUniqueEmail = true;
+                opts.Password.RequireNonAlphanumeric = false;
+                opts.Password.RequireUppercase = false;
+            })
                 .AddEntityFrameworkStores<WebAppContext>();
         }
 

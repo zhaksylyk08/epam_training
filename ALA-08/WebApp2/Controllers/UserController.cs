@@ -10,9 +10,11 @@ using DAL.Models;
 using WebApp2.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApp2.Controllers
 {
+    [Authorize]
     public class UserController : Controller
     {
         private WebAppContext _webAppContext;
