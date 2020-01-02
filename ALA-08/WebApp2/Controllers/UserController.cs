@@ -26,6 +26,7 @@ namespace WebApp2.Controllers
             _hostingEnvironment = hostingEnvironment;
         }
 
+        [AllowAnonymous]
         [Route("/users")]
         public async Task<IActionResult> Index()
         {
@@ -129,6 +130,7 @@ namespace WebApp2.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "admin")]
         [HttpGet("user/{id}/delete")]
         public IActionResult Delete(int? id)
         {
@@ -147,6 +149,7 @@ namespace WebApp2.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "admin")]
         [HttpPost("user/{id}/delete")]
         public IActionResult Delete(int id)
         {
@@ -158,6 +161,7 @@ namespace WebApp2.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize(Roles = "admin")]
         [HttpGet("/user/{id}/edit")]
         public IActionResult Edit(int? id)
         {
@@ -180,6 +184,7 @@ namespace WebApp2.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "admin")]
         [HttpPost("/user/{id}/edit")]
         public IActionResult Edit(int? id, string[] selectedAwards)
         {
