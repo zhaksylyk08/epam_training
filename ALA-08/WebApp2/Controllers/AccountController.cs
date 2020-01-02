@@ -26,6 +26,7 @@ namespace WebApp2.Controllers
             return View();
         }
 
+        [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel viewModel) 
         {
             if (ModelState.IsValid)
@@ -53,6 +54,47 @@ namespace WebApp2.Controllers
             }
 
             return View(viewModel);
+        }
+
+        [HttpGet]
+        public IActionResult Login(string returnUrl = null) 
+        {
+            return View(new LoginViewModel { ReturnUrl = returnUrl });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel viewModel) 
+        {
+            if (ModelState.IsValid) 
+            {
+                var result = await _signInManager.PasswordSignInAsync(viewModel.Email, viewModel.Password,
+                    viewModel.RememberMe, false);
+
+                if (result.Succeeded)
+                {
+                    if (!string.IsNullOrEmpty(viewModel.ReturnUrl) && Url.IsLocalUrl(viewModel.ReturnUrl))
+                    {
+                        return Redirect(viewModel.ReturnUrl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+                else 
+                {
+                    ModelState.AddModelError("", "Invalid login or(and) password");
+                }
+            }
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
     }
 }
