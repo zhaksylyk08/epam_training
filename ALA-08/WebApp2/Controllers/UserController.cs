@@ -131,34 +131,18 @@ namespace WebApp2.Controllers
         }
 
         [Authorize(Roles = "admin")]
-        [HttpGet("user/{id}/delete")]
-        public IActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var user = _webAppContext.Users.FirstOrDefault(u => u.UserId == id);
-
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return View(user);
-        }
-
-        [Authorize(Roles = "admin")]
-        [HttpPost("user/{id}/delete")]
-        public IActionResult Delete(int id)
+        public JsonResult Delete(int id)
         {
             var user = _webAppContext.Users.Find(id);
 
+            if (user == null)
+            {
+                return Json(false);
+            }
             _webAppContext.Users.Remove(user);
             _webAppContext.SaveChanges();
 
-            return RedirectToAction("Index");
+            return Json(true);
         }
 
         [Authorize(Roles = "admin")]

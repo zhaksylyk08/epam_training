@@ -24,7 +24,7 @@
     <tbody>
         @foreach (var item in Model.Users)
         {
-        <tr>
+        <tr class="user" data-id="@item.UserId">
            <td>
                <img src="@Url.Content("~/images/users/")/@item.ImageUrl" height="60px"; width="60px"/>
            </td>
@@ -40,11 +40,21 @@
                  }
             </td>
             <td>
-                <a asp-action="Details" asp-route-id="@item.UserId">Details</a>|
-                <a asp-action="Delete" asp-route-id="@item.UserId">Delete</a>|
+                <a asp-action="Details" asp-route-id="@item.UserId">Details</a>
+                <input type ="button" value="Delete" class="remove btn-outline-danger" />
                 <a asp-action="Edit" asp-route-id="@item.UserId">Edit</a>
             </td>
         </tr>
         }
     </tbody>
 </table>
+
+
+@section Scripts{
+    <script>
+    var urls = {
+        userDelete: "@Url.Action("Delete", "User")"
+        };
+    </script>
+    <script src="~/js/userList.js"></script>
+ }
