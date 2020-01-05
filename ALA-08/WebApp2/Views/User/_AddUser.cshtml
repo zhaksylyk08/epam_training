@@ -1,0 +1,41 @@
+﻿@using DAL.Models
+@using WebApp2.ViewModels
+@model UserViewModel
+
+@{
+    ViewData["Title"] = "Add New User";
+}
+<div>
+<h2>Add New User</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form class = "user-form" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Birthdate" class="control-label"></label>
+                <input asp-for="Birthdate" class="form-control" />
+                <span asp-validation-for="Birthdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl" class="control-label"></label>
+                <input asp-for="ImageUrl" name="file" id="file" type="file" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Add" class="add-new-user-btn btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+</div>

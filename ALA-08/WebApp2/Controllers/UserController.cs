@@ -73,18 +73,70 @@ namespace WebApp2.Controllers
             return View(viewModel);
         }
 
-        [HttpGet("/create-user")]
+        /*[HttpGet("/create-user")]
         public IActionResult AddUser()
         {
             var user = new User();
             user.UserAwards = new List<UserAward>();
             PopulateAssignedAwardData(user);
 
-            return View();
+            return PartialView("_AddUser");
+        }*/
+
+        public IActionResult AddUser()
+        {
+            return PartialView("_AddUser");
         }
 
+        /* [HttpPost("/create-user")]
+         public IActionResult AddUser(UserViewModel userViewModel, string[] selectedAwards)
+         {
+             var user = new User
+             {
+                 Name = userViewModel.Name,
+                 Birthdate = userViewModel.Birthdate,
+                 Age = userViewModel.Age
+             };
+
+             if (selectedAwards != null)
+             {
+                 user.UserAwards = new List<UserAward>();
+                 foreach (var award in selectedAwards)
+                 {
+                     var awardToAdd = new UserAward { UserId = user.UserId, AwardId = int.Parse(award) };
+                     user.UserAwards.Add(awardToAdd);
+                 }
+             }
+             if (ModelState.IsValid)
+             {
+                 var file = HttpContext.Request.Form.Files.FirstOrDefault();
+
+                 if (file != null)
+                 {
+                     var path = Path.Combine(_hostingEnvironment.ContentRootPath, "wwwroot", "images", "users", file.FileName);
+                     using (var fileStream = new FileStream(path, FileMode.Create))
+                     {
+                         file.OpenReadStream().CopyTo(fileStream);
+                         user.ImageUrl = file.FileName;
+                     }
+                 }
+                 else
+                 {
+                     //ModelState.AddModelError("ImageUrl", "Image is very important");
+                     user.ImageUrl = "default_img.jpg";
+                 }
+
+                 _webAppContext.Users.Add(user);
+                 _webAppContext.SaveChanges();
+                 return RedirectToAction("Index");
+             }
+
+             PopulateAssignedAwardData(user);
+             return PartialView("_AddUser", user);
+         }*/
+
         [HttpPost("/create-user")]
-        public IActionResult AddUser(UserViewModel userViewModel, string[] selectedAwards)
+        public JsonResult AddUser(UserViewModel userViewModel)
         {
             var user = new User
             {
@@ -93,15 +145,6 @@ namespace WebApp2.Controllers
                 Age = userViewModel.Age
             };
 
-            if (selectedAwards != null)
-            {
-                user.UserAwards = new List<UserAward>();
-                foreach (var award in selectedAwards)
-                {
-                    var awardToAdd = new UserAward { UserId = user.UserId, AwardId = int.Parse(award) };
-                    user.UserAwards.Add(awardToAdd);
-                }
-            }
             if (ModelState.IsValid)
             {
                 var file = HttpContext.Request.Form.Files.FirstOrDefault();
@@ -123,11 +166,10 @@ namespace WebApp2.Controllers
 
                 _webAppContext.Users.Add(user);
                 _webAppContext.SaveChanges();
-                return RedirectToAction("Index");
+                return Json(true);
             }
 
-            PopulateAssignedAwardData(user);
-            return View(user);
+            return Json(false);
         }
 
         [Authorize(Roles = "admin")]

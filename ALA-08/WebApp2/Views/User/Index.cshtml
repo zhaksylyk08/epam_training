@@ -8,11 +8,12 @@
 
 <h2>Users List</h2>
 
-<p>
-    <a asp-action = "AddUser">Add New User</a>
-</p>
+<input type="button" value="Add new user" class="addUser btn-outline-primary"/>
 
-<table class="table">
+<div class="addUserContainer" style="display:none;">
+@await Html.PartialAsync("_AddUser", new WebApp2.ViewModels.UserViewModel());
+</div>
+<table class="table user-list">
     <thead>
         <tr>
             <th>Photo</th>
