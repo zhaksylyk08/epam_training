@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using DAL.EFData;
 using DAL.Models;
 using Microsoft.AspNetCore.Identity;
+using DAL;
 
 namespace WebApp2
 {
@@ -31,6 +32,7 @@ namespace WebApp2
 
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<WebAppContext>(options => options.UseSqlServer(connectionString));
+            services.AddScoped<UnitOfWork>();
 
             services.AddIdentity<Account, IdentityRole>(opts => {
                 opts.User.RequireUniqueEmail = true;

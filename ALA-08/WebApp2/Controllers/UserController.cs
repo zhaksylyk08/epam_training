@@ -11,64 +11,53 @@ using WebApp2.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Authorization;
+using DAL;
 
 namespace WebApp2.Controllers
 {
     [Authorize]
     public class UserController : Controller
     {
-        private WebAppContext _webAppContext;
+        //private WebAppContext _webAppContext;
+        //private IUserRepository _userRepository;
+        private UnitOfWork unitOfWork = new UnitOfWork();
         private readonly IHostingEnvironment _hostingEnvironment;
 
-        public UserController(WebAppContext webAppContext, IHostingEnvironment hostingEnvironment)
+        public UserController(UnitOfWork unitOfWork, IHostingEnvironment hostingEnvironment)
         {
-            _webAppContext = webAppContext;
+            this.unitOfWork = unitOfWork;
             _hostingEnvironment = hostingEnvironment;
         }
 
         [AllowAnonymous]
         [Route("/users")]
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             var viewModel = new IndexViewModel();
 
-            viewModel.Users = await _webAppContext.Users
-                              .Include(user => user.UserAwards)
-                                .ThenInclude(user => user.Award)
-                              .OrderBy(user => user.Name)
-                              .ToListAsync();
-
+            viewModel.Users = unitOfWork.UserRepository.GetAllUsers();
+               
             return View(viewModel);
 
         }
 
         [Route("/users/{name}")]
-        public async Task<IActionResult> Index(string name)
+        public IActionResult Index(string name)
         {
             var viewModel = new IndexViewModel();
 
-            viewModel.Users = await _webAppContext.Users
-                              .Include(user => user.UserAwards)
-                                .ThenInclude(user => user.Award)
-                              .Where(user => user.Name == name)
-                              .OrderBy(user => user.Name)
-                              .ToListAsync();
+            viewModel.Users = unitOfWork.UserRepository.GetUsersByName(name);
 
             return View(viewModel);
 
         }
 
         [Route("users/{firstLetter:length(1)}")]
-        public async Task<IActionResult> Index(char firstLetter)
+        public IActionResult Index(char firstLetter)
         {
             var viewModel = new IndexViewModel();
 
-            viewModel.Users = await _webAppContext.Users
-                              .Include(user => user.UserAwards)
-                                .ThenInclude(user => user.Award)
-                              .Where(user => user.Name.Substring(0,1) == firstLetter.ToString())
-                              .OrderBy(user => user.Name)
-                              .ToListAsync();
+            var result = unitOfWork.UserRepository.GetUsersByFirstLetterOfName(firstLetter);
 
             return View(viewModel);
         }
@@ -164,8 +153,9 @@ namespace WebApp2.Controllers
                     user.ImageUrl = "default_img.jpg";
                 }
 
-                _webAppContext.Users.Add(user);
-                _webAppContext.SaveChanges();
+                //_webAppContext.Users.Add(user);
+                //_webAppContext.SaveChanges();
+                unitOfWork.UserRepository.AddUser(user);
                 return Json(true);
             }
 
@@ -175,14 +165,15 @@ namespace WebApp2.Controllers
         [Authorize(Roles = "admin")]
         public JsonResult Delete(int id)
         {
-            var user = _webAppContext.Users.Find(id);
+            var user = unitOfWork.UserRepository.GetUserById(id);
 
             if (user == null)
             {
                 return Json(false);
             }
-            _webAppContext.Users.Remove(user);
-            _webAppContext.SaveChanges();
+            //_webAppContext.Users.Remove(user);
+            //_webAppContext.SaveChanges();
+            unitOfWork.UserRepository.DeleteUser(user);
 
             return Json(true);
         }
@@ -196,10 +187,7 @@ namespace WebApp2.Controllers
                 return NotFound();
             }
 
-            var user = _webAppContext.Users
-                        .Include(user => user.UserAwards)
-                            .ThenInclude(user => user.Award)
-                        .FirstOrDefault(user => user.UserId == id);
+            var user = unitOfWork.UserRepository.GetUserWithAwards(id);
 
             if (user == null)
             {
@@ -219,29 +207,22 @@ namespace WebApp2.Controllers
                 return NotFound();
             }
 
-            var userToUpdate = _webAppContext.Users
-                                .Include(user => user.UserAwards)
-                                    .ThenInclude(user => user.Award)
-                                .FirstOrDefault(user => user.UserId == id);
+            var userToUpdate = unitOfWork.UserRepository.GetUserWithAwards(id);
 
             UpdateUserAwards(selectedAwards, userToUpdate);
-            _webAppContext.SaveChanges();
+            //_webAppContext.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 
         [Route("user/{id}/details")]
-        public async Task<IActionResult> Details(int? id)
+        public IActionResult Details(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var user = await _webAppContext.Users
-                .Include(user => user.UserAwards)
-                    .ThenInclude(user => user.Award)
-                .AsNoTracking()
-                .FirstOrDefaultAsync(user => user.UserId == id);
+            var user = unitOfWork.UserRepository.GetUserWithAwards(id);
 
             if (user == null) 
             {
@@ -251,7 +232,7 @@ namespace WebApp2.Controllers
             return View(user);
         }
 
-        [Route("user/{name}")]
+        /*[Route("user/{name}")]
         public IActionResult GetUserByName(string name)
         {
             var user = _webAppContext.Users
@@ -268,11 +249,11 @@ namespace WebApp2.Controllers
             }
 
             return View(user);
-        }
+        }*/
 
         private void PopulateAssignedAwardData(User user)
         {
-            var allAwards = _webAppContext.Awards;
+            var allAwards = unitOfWork.AwardRepository.GetAllAwards();
             var userAwards = new HashSet<int>(user.UserAwards.Select(u => u.AwardId));
             var viewModel = new List<AssignedAwardData>();
 
@@ -301,22 +282,22 @@ namespace WebApp2.Controllers
             var userAwards = new HashSet<int>
                 (userToUpdate.UserAwards.Select(user => user.AwardId));
 
-            foreach (var award in _webAppContext.Awards)
+            foreach (var award in unitOfWork.AwardRepository.GetAllAwards())
             {
                 if (selectedAwardsHS.Contains(award.AwardId.ToString()))
                 {
                     if (!userAwards.Contains(award.AwardId))
                     {
-                        userToUpdate.UserAwards.Add(new UserAward { UserId = userToUpdate.UserId, AwardId = award.AwardId });
+                        //userToUpdate.UserAwards.Add(new UserAward { UserId = userToUpdate.UserId, AwardId = award.AwardId });
                     }
                 }
                 else
                 {
                     if (userAwards.Contains(award.AwardId))
                     {
-                        UserAward awardToRemove = userToUpdate.UserAwards
-                                                    .FirstOrDefault(a => a.AwardId == award.AwardId);
-                        _webAppContext.Remove(awardToRemove);
+                        //UserAward awardToRemove = userToUpdate.UserAwards
+                                                    //.FirstOrDefault(a => a.AwardId == award.AwardId);
+                        //_webAppContext.Remove(awardToRemove);
                     }
                 }
             }
